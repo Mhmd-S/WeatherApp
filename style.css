@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#location-input {
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    border:none;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+#location-input:focus {
+    outline: none;
+    border-bottom: 1px solid #188fff;
+}
+
+.invalidInput{
+    border-bottom: 3px solid red !important;
+}
+
+.invalidInput::placeholder {
+    color: rgba(255, 0, 0, 0.216) !important;
+}
+
+#search-button {
+    width: 20%;
+    padding: .2rem;
+    background-color: #188fff;
+    border: 1px solid #188fff;
+    color: white;
+    font-weight: 600;
+    border-radius: 60px;
+}
+
+.weather-wrapper {
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.386);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(0%,1fr));
+    grid-template-areas: 
+        "h b"
+        "a c"
+        "a d";
+}
+
+.weather-header {
+    grid-area: h;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-time {
+    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.weatherFigure{
+    display: inline;
+}
+
+.current-temp-wrapper {
+    grid-area: a;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.current-temp-info {
+    font-size: 4.5rem;
+}
+
+.current-temp-desc{
+    font-size: 1.5rem;
+}
+
+.low-high {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#feellike-cont {
+    grid-area: b;
+}
+
+#wind-cont {
+    grid-area: c;
+}
+
+#humidity-cont {
+    grid-area: d;
+}
+
+.weather-info {
+    padding-left: 1.5rem;
+    border-left: 2px solid rgba(0, 0, 0, 0.247);
+}
+

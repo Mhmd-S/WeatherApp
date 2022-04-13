@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Gadget</title>
+</head>
+<body>
+
+    <!-- The weather info page wrapper -->
+    <div class="main-wrapper">
+
+        <form class="search-bar" action="#">
+            <label for="location">
+                <input type="text" id="location-input" placeholder="City Name">
+            </label>
+            <button type="submit" id="search-button">Search</button>
+        </form>
+
+        <!-- Main Wrapper were everything is housed -->
+        <main class="weather-wrapper">
+            <!-- Header of the weather display. Displays the location name -->
+            <header class="weather-header">
+
+                <div id="header-title-wrapper"><h1 id="city-name">New York</h1><time class="current-time" datetime="4:31 PM">4:31 PM</time></div>
+                
+                <figure class="weatherFigure"><img id="weatherIcon" src="http://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon"></figure>
+
+            </header>
+
+            <!-- This article will display the current weather -->
+            <section class="current-temp-wrapper">
+                
+                <h2 class="current-temp-info">20 °C</h2>
+                
+                <p class="current-temp-desc">clear sky</p>
+                
+                <div class="low-high">
+                    <p class="highest-temp">H: 27</p>
+                    <p class="lowest-temp">L: 14</p>
+                </div>
+
+            </section>
+
+            <article id="feellike-cont" class="weather-info">
+                <h2>Feels Like</h2>
+                <p id="feelTemp" class="weather-info-insert">19 °C</p>
+            </article>
+
+            <article id="wind-cont" class="weather-info">
+                <h2>Wind</h2>
+                <p id="wind" class="weather-info-insert">3 km/h</p>
+            </article>
+
+            <article id="humidity-cont" class="weather-info">
+                <h2>Humidity</h2>
+                <p id="humidity" class="weather-info-insert">64%</p>
+            </article>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
